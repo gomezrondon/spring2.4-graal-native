@@ -1,0 +1,12 @@
+
+
+#build images with gradle
+gradle clean bootBuildImage
+
+
+#run the container
+docker-compose up
+
+#destroy the container
+docker-compose down
+
