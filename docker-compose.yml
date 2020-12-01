@@ -1,6 +1,18 @@
 version: '3.1'
 services:
+  pepe:
+    container_name: pepe
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: movie
+      MYSQL_USER: roor
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
   rest-service:
     image: spring24:0.0.1-SNAPSHOT
+    environment:
+      - URLDB=127.0.0.1:3306
     ports:
       - 8080:8080

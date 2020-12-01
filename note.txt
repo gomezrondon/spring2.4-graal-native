@@ -1,3 +1,4 @@
+https://github.com/spring-projects-experimental/spring-graalvm-native/tree/master/spring-graalvm-native-samples/webflux-r2dbc/src
 
 
 #build images with gradle
@@ -5,7 +6,8 @@ gradle clean bootBuildImage
 
 
 #run the container
-docker-compose up
+docker-compose up -d
+docker-compose -f docker-compose-app.yml up
 
 #destroy the container
 docker-compose down
